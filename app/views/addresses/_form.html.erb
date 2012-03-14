@@ -1,0 +1,18 @@
+<%= form.fields_for :addresses do |address_form| %>
+  <div class="field">
+    <%= address_form.label :street, 'Street:' %>
+    <%= address_form.text_field :street %>
+
+    <%= address_form.label :city, 'City:' %>
+    <%= address_form.text_field :city %>
+
+    <%= address_form.label :zip_code, 'ZIP Code:' %>
+    <%= address_form.text_field :zip_code %>
+  
+  <% unless address_form.object.nil? || address_form.object.new_record? %>
+    
+      <%= address_form.label :_destroy, 'Remove:' %>
+      <%= address_form.check_box :_destroy %>
+  <% end %>
+   </div>
+<% end %>

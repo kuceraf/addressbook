@@ -1,0 +1,22 @@
+<h1>Editing company <%= @company.name %></h1>
+<%= render 'form' %>
+      
+<%= link_to 'Show', @company %> |
+<%= link_to 'Back', companies_path %>
+ </div>
+  
+<script>
+$("document").ready(function(){
+	$("#button1").click(function(){
+		effectAdd1()
+	});
+	
+	$("#button2").click(function(){
+		effectAdd2()
+	});
+	
+	$("#button3").click(function(){
+		effectAdd3()
+	});
+});                    
+</script>

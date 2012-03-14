@@ -1,0 +1,21 @@
+<button id="button2">Add Address</button>
+<div id="showMe2" class="showMe">
+<h3>Add an address:</h3>
+<%= form_for([@company, @company.addresses.build]) do |e| %>
+  <div class="field">
+    <%= e.label :street %><br />
+    <%= e.text_field :street %>
+  </div>
+  <div class="field">
+    <%= e.label :city %><br />
+    <%= e.text_field :city %>
+  </div>
+  <div class="field">
+    <%= e.label :ZIP_code %><br />
+    <%= e.text_field :zip_code %>
+  </div>
+  <div class="actions">
+    <%= e.submit %>
+  </div>
+<% end %>
+</div>

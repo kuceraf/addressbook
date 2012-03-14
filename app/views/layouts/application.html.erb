@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Address Book</title>
+  <%= stylesheet_link_tag    "application" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+
+<body>
+  <header>
+      <div class="container head">
+        <h1 class="head_title">Address Book</h1>
+    </div>
+</header>
+
+<div class="container">
+    <%= yield %>
+</div>
+</body>
+</html>

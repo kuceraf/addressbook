@@ -1,0 +1,11 @@
+<%= form.fields_for :emails do |email_form| %>
+  <div class="field">
+    <%= email_form.label :email, 'Email:' %>
+    <%= email_form.text_field :email %>
+  
+  <% unless email_form.object.nil? || email_form.object.new_record? %>
+      <%= email_form.label :_destroy, 'Remove:' %>
+      <%= email_form.check_box :_destroy %>
+  <% end %>
+   </div>
+<% end %>

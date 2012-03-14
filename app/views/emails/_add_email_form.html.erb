@@ -1,0 +1,14 @@
+<button id="button1">Add Email</button>
+<div id="showMe1" class="showMe">
+<h3>Add an email:</h3>
+<%= form_for([@company, @company.emails.build]) do |e| %>
+  <div class="field">
+    <%= e.label :email %><br />
+    <%= e.text_field :email %>
+  </div>
+  <div class="actions">
+    <%= e.submit %>
+  </div>
+<% end %>
+</div>
+

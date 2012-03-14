@@ -1,0 +1,16 @@
+<button id="button3">Add Address</button>
+<div id="showMe3" class="showMe">
+<h3>Add Phone:</h3>
+<%= form_for([@company, @company.phones.build]) do |e| %>
+  <div class="field">
+    <%= e.label :name %><br />
+    <%= e.text_field :name %>
+  </div>
+  <div class="field">
+    <%= e.label :phone_number %><br />
+    <%= e.text_field :phone_number %>
+  </div>
+    <%= e.submit %>
+  </div>
+<% end %>
+</div>

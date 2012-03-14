@@ -1,0 +1,14 @@
+<%= form.fields_for :phones do |phone_form| %>
+  <div class="field">
+    <%= phone_form.label :name, 'Name:' %>
+    <%= phone_form.text_field :name %>
+  
+    <%= phone_form.label :phone_number, 'Phone Number:' %>
+    <%= phone_form.text_field :phone_number %>
+ 
+  <% unless phone_form.object.nil? || phone_form.object.new_record? %>
+      <%= phone_form.label :_destroy, 'Remove:' %>
+      <%= phone_form.check_box :_destroy %>
+  <% end %>
+   </div>
+<% end %>

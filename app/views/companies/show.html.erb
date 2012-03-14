@@ -1,0 +1,72 @@
+<p id="notice"><%= notice %></p>
+<h1>Company <%=@company.name%></h1>
+  
+<div class="color show">
+<h3>Emails</h3>
+<table>
+ <tr>
+    <th>Email:</th>
+  </tr>
+<% @company.emails.each do |email| %>
+  <tr>
+    <td><%= email.email%></td>
+  </tr>
+<% end %>
+</table>
+<%= render "emails/add_email_form" %>
+</div>
+
+<div class="color show">
+<h3>Addresses</h3>
+<table>
+  <tr>
+    <th>Street:</th>
+    <th>City:</th>
+    <th>ZIP Code:</th>
+  </tr>
+<% @company.addresses.each do |address| %>
+  <tr>
+    <td><%= address.street%></td>
+    <td><%= address.city%></td>
+    <td><%= address.zip_code%></td>
+  </tr>
+<% end %>
+</table>
+  <%= render "addresses/add_address_form" %>
+</div>
+
+<div class="color show">
+<h3>Phone Numbers</h3>
+<table>
+  <tr>
+    <th>Name:</th>
+    <th>Number:</th>
+  </tr>
+<% @company.phones.each do |phone| %>
+  <tr>
+    <td><%= phone.name%></td>
+    <td><%= phone.phone_number%></td>
+  </tr>
+<% end %>
+</table>
+<%= render "phones/add_phone_form" %>
+
+<%= link_to 'Edit', edit_company_path(@company) %> |
+<%= link_to 'Back', companies_path %>
+</div>
+      
+<script>
+$("document").ready(function(){
+	$("#button1").click(function(){
+		effectAdd1()
+	});
+	
+	$("#button2").click(function(){
+		effectAdd2()
+	});
+	
+	$("#button3").click(function(){
+		effectAdd3()
+	});
+});                    
+</script>
