@@ -1,15 +1,21 @@
 class CompaniesController < ApplicationController 
  
- def Company.search(search)
-    if search
-     find(:all, :conditions => ['name LIKE ?', "%#{search}%"])
+ def Company.search(search_params)
+    if search_params
+     find(:all, :conditions => ['name LIKE ?', "%#{search_params}%"])
     else
      find(:all)
     end
  end
+ 
+ def search
+   @companies = Company.search(params[:search])
+   puts @companies
+   render "index"
+ end
 
   def index
-    @companies = Company.search(params[:search])
+    @companies = Company.all
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @companies }

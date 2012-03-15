@@ -5,10 +5,10 @@
   <div class="field">
     <%= e.label :email %><br />
     <%= e.text_field :email %>
+    <%= error_messages_for :email %>
   </div>
   <div class="actions">
     <%= e.submit %>
   </div>
 <% end %>
 </div>
-
