@@ -1,18 +1,20 @@
+<table class="form">
 <%= form.fields_for :addresses do |address_form| %>
-  <div class="field">
-    <%= address_form.label :street, 'Street:' %>
-    <%= address_form.text_field :street %>
+  <tr>
+    <td class="tdcolor"><%= address_form.label :street, 'Street:' %></td>
+    <td class="tdcolor"><%= address_form.text_field :street %></td>
 
-    <%= address_form.label :city, 'City:' %>
-    <%= address_form.text_field :city %>
+    <td class="tdcolor"><%= address_form.label :city, 'City:' %></td>
+    <td class="tdcolor"><%= address_form.text_field :city %></td>
 
-    <%= address_form.label :zip_code, 'ZIP Code:' %>
-    <%= address_form.text_field :zip_code %>
+    <td class="tdcolor"><%= address_form.label :zip_code, 'ZIP Code:' %></td>
+    <td class="tdcolor"><%= address_form.text_field :zip_code %></td>
   
   <% unless address_form.object.nil? || address_form.object.new_record? %>
     
-      <%= address_form.label :_destroy, 'Remove:' %>
-      <%= address_form.check_box :_destroy %>
+      <td td class="tdcolor"><%= address_form.label :_destroy, 'Remove:' %></td>
+      <td td class="tdcolor"><%= address_form.check_box :_destroy %></td>
   <% end %>
-   </div>
+  </tr>
 <% end %>
+</table>

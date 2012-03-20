@@ -1,11 +1,13 @@
+<table class="form">
 <%= form.fields_for :emails do |email_form| %>
-  <div class="field">
-    <%= email_form.label :email, 'Email:' %>
-    <%= email_form.text_field :email %>
+  <tr>
+    <td class="tdcolor2"><%= email_form.label :email, 'Email:' %></td>
+    <td class="tdcolor2"><%= email_form.text_field :email %></td>
   
   <% unless email_form.object.nil? || email_form.object.new_record? %>
-      <%= email_form.label :_destroy, 'Remove:' %>
-      <%= email_form.check_box :_destroy %>
+      <td class="tdcolor2"><%= email_form.label :_destroy, 'Remove:' %></td>
+      <td class="tdcolor2"><%= email_form.check_box :_destroy %></td>
   <% end %>
-   </div>
+  </tr>
 <% end %>
+</table>

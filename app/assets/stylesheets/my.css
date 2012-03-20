@@ -73,7 +73,6 @@ caption {background:#eee;}
 .search{padding-bottom: 20px; margin-left: auto; }
 .foot {background-color: black; height: 50px;}
 
-/*td, tr, table {border: solid 1px}*/
 .color{background-color: #e5ecf9}
 .color2{background-color: #c0c0c0}
 .new_edit{padding: 20px; margin: 10px;}
@@ -84,6 +83,11 @@ caption {background:#eee;}
 .indextl{text-align: right; width: 30px}
 .newc{align: center}
 .nouder{text-decoration: none;}
+.form{text-align: left; padding: 0px; width: auto; margin: 0px;}
+.tdcolor{background-color: transparent !important ;}
+.tdcolor2{background-color: transparent !important ;}
+
+
 div.showMe /*Add email show effect*/
 {
       border: none;
