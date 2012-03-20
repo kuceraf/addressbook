@@ -12,6 +12,7 @@
   </tr>
 <% end %>
 </table>
+<button id="button1">Add Email</button>
 <%= render "emails/add_email_form" %>
 </div>
 
@@ -31,6 +32,7 @@
   </tr>
 <% end %>
 </table>
+  <button id="button2">Add Address</button>
   <%= render "addresses/add_address_form" %>
 </div>
 
@@ -48,6 +50,7 @@
   </tr>
 <% end %>
 </table>
+<button id="button3">Add Phone</button>
 <%= render "phones/add_phone_form" %>
 
 <%= link_to 'Edit', edit_company_path(@company) %> |

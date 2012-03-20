@@ -30,3 +30,4 @@ var effectAdd3 = function(){
 				$("#button3").text("Add Phone");
 			}
 }
+
